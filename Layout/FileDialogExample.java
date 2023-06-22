@@ -9,7 +9,8 @@ public class FileDialogExample {
 
         Button button = new Button("Open File Dialog");
         button.setBounds(100, 100, 200, 30);
-        button.addActionListener(new ActionListener() {
+
+        ActionListener al = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 FileDialog fileDialog = new FileDialog(frame, "Select File", FileDialog.LOAD);
                 // Set the current directory for the file dialog (optional)
@@ -18,7 +19,9 @@ public class FileDialogExample {
                 File selectedFile = new File(fileDialog.getDirectory(), fileDialog.getFile());
                 System.out.println("Selected File: " + selectedFile.getAbsolutePath());
             }
-        });
+        };
+
+        button.addActionListener(al);
 
         frame.add(button);
         frame.setSize(400, 300);
