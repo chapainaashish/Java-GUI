@@ -1,0 +1,26 @@
+<web-app>
+    <servlet>
+        <servlet-name>getservlet</servlet-name>
+        <servlet-class>ServletEx.ServletGet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>postservlet</servlet-name>
+        <servlet-class>ServletEx.ServletPost</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <serlvet-name>getservlet</serlvet-name>
+        <url-pattern>/getservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>postservlet</servlet-name>
+        <url-pattern>/postservlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
+
+
+
