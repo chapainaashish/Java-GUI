@@ -11,8 +11,7 @@ public class CardLayoutExample {
         frame.setLayout(new CardLayout());
 
         Panel cardPanel = new Panel();
-        CardLayout cardLayout = new CardLayout();
-        cardPanel.setLayout(cardLayout);
+        cardPanel.setLayout(new CardLayout());
 
         Button button1 = new Button("Card 1");
         Button button2 = new Button("Card 2");
@@ -24,13 +23,7 @@ public class CardLayoutExample {
 
         frame.add(cardPanel);
 
-        // Button to switch to the next card
-        Button nextButton = new Button("Next");
-        nextButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                cardLayout.next(cardPanel);
-            }
-        });
+
     }
 }
 
