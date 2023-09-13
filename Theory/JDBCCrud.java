@@ -1,8 +1,11 @@
+package Theory;
+
 import java.sql.*;
 
 /*
 executeQuery() ----- SELECT [return resultset in ResultSet data type]
-executeUpdate() ------ UPDATE, DELETE, CREATE [return num of row affected in int]
+executeUpdate() ------ UPDATE, DELETE, CREATE         JRadioButton radioButton1 = new JRadioButton("Radio Button 1");
+[return num of row affected in int]
  */
 public class JDBCCrud {
     JDBCCrud(){

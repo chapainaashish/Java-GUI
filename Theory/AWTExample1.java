@@ -1,3 +1,5 @@
+package Theory;
+
 // Using Inheritance
 import java.awt.*;
 

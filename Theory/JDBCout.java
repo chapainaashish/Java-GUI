@@ -20,7 +20,7 @@ public class JDBCout {
 
             resultSet.beforeFirst(); // Move the cursor back to the beginning
 
-            String[][] data = new String[rowCount][2]; // Assuming 2 columns: id and user
+            Object[][] data = new Object[rowCount][2]; // Assuming 2 columns: id and user
 
 
 

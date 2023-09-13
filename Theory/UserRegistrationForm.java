@@ -1,17 +1,18 @@
+package Theory;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import java.awt.event.*;
 public class UserRegistrationForm {
 
     public UserRegistrationForm() {
 
         // Frame
-        JFrame frame = new JFrame();
-        frame.setTitle("Basic Form Example");
+        JFrame frame = new JFrame("Basic Form Example");
         frame.setSize(400, 400);
         frame.setLayout(new GridLayout(0, 1));
+        frame.setVisible(true);
+
 
         // Label
         JLabel label = new JLabel("Name");
@@ -36,7 +37,7 @@ public class UserRegistrationForm {
         JRadioButton radioButton1 = new JRadioButton("Radio Button 1");
         JRadioButton radioButton2 = new JRadioButton("Radio Button 2");
 
-
+        // to check only one
         ButtonGroup buttongroup = new ButtonGroup();
         buttongroup.add(radioButton1);
         buttongroup.add(radioButton2);
@@ -54,6 +55,7 @@ public class UserRegistrationForm {
                 String name = textField.getText();
                 String country = (String) dropdown.getSelectedItem();
                 boolean writingSelected = checkbox1.isSelected();
+                String isWriting = checkbox1.getText();
                 boolean readingSelected = checkbox2.isSelected();
                 String radioButtonSelected = radioButton1.isSelected() ? "Radio Button 1" : "Radio Button 2";
 
@@ -68,6 +70,7 @@ public class UserRegistrationForm {
                 System.out.println("Country: " + country);
                 System.out.println("Writing selected: " + writingSelected);
                 System.out.println("Reading selected: " + readingSelected);
+                System.out.println("Str: " + isWriting);
                 System.out.println("Radio button selected: " + radioButtonSelected);
 
                 // Optionally, you can reset the form fields after successful submission:
@@ -78,8 +81,6 @@ public class UserRegistrationForm {
                 radioButton1.setSelected(true);
             }
         });
-
-        frame.setVisible(true);
     }
 
     public static void main(String[] args) {

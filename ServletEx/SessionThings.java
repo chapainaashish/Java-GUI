@@ -7,7 +7,7 @@ public class SessionThings extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
         // Creating session object
-        HttpSession session =  request.getSession();
+        HttpSession session =  request.getSession(true);
 
         // Setting session
         session.setAttribute("username", "Aashish");
@@ -20,8 +20,6 @@ public class SessionThings extends HttpServlet{
         // Forwarding
         RequestDispatcher rd = request.getRequestDispatcher("login");
         rd.forward(request, response);
-
-
 
     }
 }
