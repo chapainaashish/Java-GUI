@@ -1,3 +1,5 @@
+package Theory;
+
 import java.sql.*;
 
 public class JDBCout {
