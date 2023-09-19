@@ -1,30 +1,37 @@
 package Layout;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.event.*;
 
-// TO be done
-public class CardLayoutExample {
-    public static void main(String[] args) {
-        Frame frame = new Frame("CardLayout Example");
-        frame.setLayout(new CardLayout());
+public class CardLayoutExample extends JFrame implements ActionListener {
+    CardLayout card;
+    Container cPane;
 
-        Panel cardPanel = new Panel();
-        cardPanel.setLayout(new CardLayout());
+    CardLayoutExample(){
+        setTitle("CardExample");
+        setSize(300, 300);
+        setVisible(true);
 
-        Button button1 = new Button("Card 1");
-        Button button2 = new Button("Card 2");
-        Button button3 = new Button("Card 3");
+        cPane = getContentPane();
+        card = new CardLayout();
+        cPane.setLayout(card);
 
-        cardPanel.add(button1, "card1");
-        cardPanel.add(button2, "card2");
-        cardPanel.add(button3, "card3");
+        JButton btn1 = new JButton("Apple");
+        JButton btn2 = new JButton("Boy");
+        btn1.addActionListener(this);
+        btn2.addActionListener(this);
 
-        frame.add(cardPanel);
+        // first card is btn1 and so on
+        cPane.add("a", btn1);
+        cPane.add("b", btn2);
+    }
 
+    public void actionPerformed(ActionEvent e) {
+        card.next(cPane);
+    }
 
+    public static void main(String arg[]) {
+        new CardLayoutExample();
     }
 }
-
-

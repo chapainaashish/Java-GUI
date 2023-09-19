@@ -5,7 +5,7 @@ import java.awt.*;
 public class GridLayoutExample {
     GridLayoutExample() {
         Frame frame = new Frame("Flow Layout Example");
-        frame.setLayout(new GridLayout(3, 2));
+        frame.setLayout(new GridLayout(3, 7));
         frame.setSize(300, 200);
         frame.setVisible(true);
 
