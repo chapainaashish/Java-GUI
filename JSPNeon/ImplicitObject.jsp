@@ -20,6 +20,9 @@
         session.setAttribute("user", "Aashish");
         session.setAttribute("password", "12345");
 
+        // destroying session
+        session.invalidate();
+
         // getting session
         String user = (String)session.getAttribute("user");
         String password = (String)session.getAttribute("password");

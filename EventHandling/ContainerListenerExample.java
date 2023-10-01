@@ -22,11 +22,11 @@ class ContainerListenerExample implements ContainerListener {
     }
 
     public void componentAdded(ContainerEvent e) {
-        System.out.println("Component Added: " + e.getChild().toString());
+        System.out.println("Component Added");
     }
 
     public void componentRemoved(ContainerEvent e) {
-        System.out.println("Component Removed: " + e.getChild().toString());
+        System.out.println("Component Removed");
     }
 
     public static void main(String[] args) {

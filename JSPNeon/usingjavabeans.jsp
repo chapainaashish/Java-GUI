@@ -4,8 +4,8 @@
 <jsp:useBean id="person" class="JSPNeon.JavaBeansEx" scope="session" />
 
 <%-- Set the properties of the JavaBean using request parameters --%>
-<jsp:setProperty name="person" property="name" param="name" />
-<jsp:setProperty name="person" property="age" param="age" />
+<jsp:setProperty name="person" property="name" value="Aashish" />
+<jsp:setProperty name="person" property="age" value="20" />
 
 <!DOCTYPE html>
 <html>
