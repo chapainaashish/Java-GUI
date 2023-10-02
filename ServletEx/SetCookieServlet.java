@@ -16,6 +16,9 @@ public class SetCookieServlet extends HttpServlet {
         // This example sets the cookie to expire after 1 hour (60 minutes * 60 seconds)
         cookie1.setMaxAge(60 * 60);
 
+        // to destroy cookie
+        cookie1.setMaxAge(0);
+
         // Add the cookie to the response
         response.addCookie(cookie1);
 

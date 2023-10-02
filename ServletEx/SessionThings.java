@@ -19,6 +19,10 @@ public class SessionThings extends HttpServlet{
 
         // Forwarding
         RequestDispatcher rd = request.getRequestDispatcher("login");
- 
+        rd.forward(request, response);
+
+        // Invalidate (destroy) the session
+        session.invalidate();
+
     }
 }

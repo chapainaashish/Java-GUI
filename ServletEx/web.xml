@@ -7,7 +7,7 @@
     <servlet>
         <servlet-name>postservlet</servlet-name>
         <servlet-class>ServletEx.ServletPost</servlet-class>
-    </servlet>
+    </servlet>\
 
     <servlet-mapping>
         <serlvet-name>getservlet</serlvet-name>
