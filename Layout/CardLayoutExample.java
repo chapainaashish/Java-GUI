@@ -4,16 +4,17 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class CardLayoutExample extends JFrame implements ActionListener {
+public class CardLayoutExample implements ActionListener {
     CardLayout card;
     Container cPane;
 
     CardLayoutExample(){
-        setTitle("CardExample");
-        setSize(300, 300);
-        setVisible(true);
+        JFrame frame = new JFrame("Card Layout");
+        frame.setSize(300, 200);
+        frame.setLayout(null);
+        frame.setVisible(true);
 
-        cPane = getContentPane();
+        cPane = frame.getContentPane();
         card = new CardLayout();
         cPane.setLayout(card);
 

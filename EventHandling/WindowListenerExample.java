@@ -30,7 +30,7 @@ class WindowListenerExample implements WindowListener {
     }
 
     public void windowDeiconified(WindowEvent e) {
-        System.out.println("Window Deiconified");
+        System.out.println("Window De iconified");
     }
 
     public void windowActivated(WindowEvent e) {

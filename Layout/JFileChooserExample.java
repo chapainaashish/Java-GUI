@@ -2,17 +2,16 @@ package Layout;
 import javax.swing.*;
 import java.io.*;
 
-public class JFileChooserExample extends JFrame{
+public class JFileChooserExample {
     JFileChooserExample(){
-        setTitle("File Chooser");
-        setSize(300, 300);
-        setLayout(null);
-        setVisible(true);
+        JFrame frame = new JFrame("Card Layout");
+        frame.setSize(300, 200);
+        frame.setVisible(true);
 
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setCurrentDirectory(new File("/"));
 
-        int result = fileChooser.showOpenDialog(this);
+        int result = fileChooser.showOpenDialog(frame);
         if (result == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             System.out.println("Selected file: " + selectedFile.getAbsolutePath());

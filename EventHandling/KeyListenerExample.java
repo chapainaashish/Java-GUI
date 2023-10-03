@@ -23,9 +23,7 @@ class KeyListenerExample implements KeyListener {
         System.out.println("Key Released");
     }
 
-    public void keyTyped(KeyEvent e) {
-        System.out.println("Key Typed");
-    }
+    public void keyTyped(KeyEvent e) { System.out.println("Key Typed"); }
 
     public static void main(String[] args) {
         new KeyListenerExample();
